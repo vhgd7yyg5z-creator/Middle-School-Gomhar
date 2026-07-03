@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Middle School, Gomhar</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<script>
+
+function openImage(src){
+
+document.getElementById("lightbox").style.display="block";
+
+document.getElementById("lightbox-img").src=src;
+
+}
+
+function closeImage(){
+
+document.getElementById("lightbox").style.display="none";
+
+}
+
+</script>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">🏫 Middle School, Gomhar</div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#message">Message</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+        <h1>Middle School, Gomhar</h1>
+
+        <p>
+            Knowledge • Discipline • Excellence
+        </p>
+
+        <a href="#about" class="hero-btn">
+            Explore School
+        </a>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="section">
+
+    <h2>About School</h2>
+
+    <div class="content-box">
+
+        <p>
+
+            Middle School, Gomhar is a government school with around
+            200–250 students. Both boys and girls study here in a safe
+            and friendly environment.
+
+            The school ensures that all educational facilities and
+            government benefits are provided to students on time.
+
+            With dedicated teachers and active learners, the school is
+            recognized as one of the leading schools in the area.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- PRINCIPAL MESSAGE -->
+
+<section id="message" class="section light">
+
+    <h2>Principal's Message</h2>
+
+    <div class="content-box">
+
+        <p>
+
+            Hum vishwas rakhte hain ki achhi shiksha hi safal jeevan ki
+            buniyad hai.
+
+            Hamara lakshya har student ko seekhne aur aage badhne ke liye
+            prerit karna hai.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FACILITIES -->
+
+<section id="facilities" class="section">
+
+    <h2>Facilities</h2>
+
+    <div class="facility-grid">
+
+        <div class="facility-card">
+            🍱
+            <h3>Mid-Day Meal</h3>
+            <p>Daily Mid-Day Meal for all students.</p>
+        </div>
+
+        <div class="facility-card">
+            💧
+            <h3>Drinking Water</h3>
+            <p>Safe and clean drinking water facility.</p>
+        </div>
+
+        <div class="facility-card">
+            🚻
+            <h3>Clean Toilets</h3>
+            <p>Well-maintained toilets for students.</p>
+        </div>
+
+        <div class="facility-card">
+            🏫
+            <h3>Classrooms</h3>
+            <p>Proper seating and learning environment.</p>
+        </div>
+
+        <div class="facility-card">
+            📚
+            <h3>Learning Support</h3>
+            <p>Learning materials and stationery support.</p>
+        </div>
+
+        <div class="facility-card">
+            ⚽
+            <h3>Sports</h3>
+            <p>Playground and sports activities.</p>
+        </div>
+
+        <div class="facility-card">
+            ❤️
+            <h3>Health Programs</h3>
+            <p>Health, hygiene and awareness activities.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FACULTY -->
+
+<section id="faculty" class="section light">
+
+    <h2>Faculty Members</h2>
+
+<div class="headmaster-card">
+    <img src="images/headmaster.jpeg" onclick="openImage(this.src)">
+    <h4>Mr. Bipul Kumar Singh</h4>
+    <p>Head Master</p>
+    <p>M.Sc, M.A(Edu.), B.Ed, </p>
+</div>
+
+<div class="teacher-grid">
+
+    <div class="teacher-card">
+        <img src="images/Ranjit Kumar.jpeg" onclick="openImage(this.src)">
+        <h4>Ranjit Kumar</h4>
+        <p>MA, D El Ed</p>
+    </div>
+
+
+    <div class="teacher-card">
+        <img src="images/Pawan Kumar.jpeg" onclick="openImage(this.src)">
+        <h4>Pawan Kumar</h4>
+        <p>BA, BT</p>
+    </div>
+
+    <div class="teacher-card">
+        <img src="images/Ranju Kumari.jpeg" onclick="openImage(this.src)">
+        <h4>Ranju Kumari</h4>
+        <p>BA, D El Ed</p>
+    </div>
+
+    <div class="teacher-card">
+        <img src="images/Manju Kumari.jpeg" onclick="openImage(this.src)">
+        <h4>Manju Kumari</h4>
+        <p>BA, D El Ed</p>
+    </div>
+
+    <div class="teacher-card">
+        <img src="images/Harendra Kumar.jpeg" onclick="openImage(this.src)">
+        <h4>Harendra Kumar</h4>
+        <p>IA, D El Ed</p>
+    </div>
+
+    <div class="teacher-card">
+        <img src="images/Ankit Yadav.jpeg" onclick="openImage(this.src)">
+        <h4>Ankit Yadav</h4>
+        <p>B Tech, D El Ed</p>
+    </div>
+
+</div>
+</section>
+
+<!-- GALLERY PREVIEW -->
+
+<section id="gallery" class="section">
+
+    <h2>Gallery</h2>
+
+    <div class="gallery-preview">
+
+        <div class="gallery-box">
+    <img src="images/gallery/independence/Independence Day 2024.jpeg">
+</div>
+
+<div class="gallery-box">
+    <img src="images/gallery/sports/Running Girls.jpeg">
+</div>
+
+<div class="gallery-box">
+    <img src="images/gallery/trip/Students In Rajgir.jpeg">
+</div>
+
+        <a href="gallery.html" class="gallery-more">
+            +
+        </a>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="section light">
+
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+
+        <p><strong>Email:</strong> middleschoolgomhar@gmail.com</p>
+
+        <p><strong>Phone:</strong> 9876543210</p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Middle School, Gomhar
+    </p>
+
+</footer>
+
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+    <img id="modalImg">
+</div>
+
+<script>
+function openImage(src){
+    document.getElementById("imageModal").style.display="flex";
+    document.getElementById("modalImg").src=src;
+}
+
+function closeImage(){
+    document.getElementById("imageModal").style.display="none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Gallery - Middle School, Gomhar</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.gallery-nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    padding:30px;
+}
+
+.gallery-nav button{
+    padding:12px 18px;
+    border:none;
+    border-radius:8px;
+    background:#138808;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.gallery-nav button:hover{
+    background:#0f6506;
+}
+
+.gallery-section{
+    display:none;
+    padding:20px 8%;
+}
+
+.gallery-section.active{
+    display:block;
+}
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.photo-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    cursor:pointer;
+}
+
+.photo-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.caption{
+    padding:12px;
+    text-align:center;
+    font-weight:500;
+}
+
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+}
+
+.lightbox img{
+    display:block;
+    margin:auto;
+    max-width:90%;
+    max-height:80%;
+    margin-top:50px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+.back-home{
+    text-align:center;
+    margin:30px;
+}
+
+.back-home a{
+    text-decoration:none;
+    color:white;
+    background:#ff9933;
+    padding:12px 18px;
+    border-radius:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🏫 Middle School, Gomhar</div>
+</nav>
+
+<section class="section">
+
+<h2>School Gallery</h2>
+
+<div class="gallery-nav">
+
+<button onclick="showGallery('independence')">Independence Day</button>
+
+<button onclick="showGallery('republic')">Republic Day</button>
+
+<button onclick="showGallery('kit')">Kit Distribution</button>
+
+<button onclick="showGallery('ptm')">Parent Teacher Meeting</button>
+
+<button onclick="showGallery('pbl')">PBL Program</button>
+
+<button onclick="showGallery('plant')">Plant Distribution</button>
+
+<button onclick="showGallery('result')">Result Distribution</button>
+
+<button onclick="showGallery('trip')">School Trip</button>
+
+<button onclick="showGallery('sports')">Sports</button>
+
+<button onclick="showGallery('students')">Student Activities</button>
+
+</div>
+
+<!-- Independence Day -->
+
+<div id="independence" class="gallery-section active">
+
+<h2>Independence Day</h2>
+
+<div class="photo-grid">
+
+    <div class="photo-card">
+        <img src="images/gallery/independence/Independence Day 2023.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Independence Day 2023</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/independence/Independence Day 2023-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Flag Hoisting Ceremony</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/independence/Independence Day 2023-3.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Participation</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/independence/Independence Day 2024.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Independence Day 2024</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/independence/Independence Day 2024-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">National Flag Ceremony</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/independence/Independence Day 2024-3.jpeg" onclick="openImage(this.src)">
+        <div class="caption">School Celebration</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/independence/Independence Day 2024-4.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Mera Bharat Mahan</div>
+    </div>
+
+    <div class="photo-card">
+        <video controls width="100%">
+            <source src="images/gallery/independence/Independence Day.mp4" type="video/mp4">
+        </video>
+        <div class="caption">Desh Geet</div>
+    </div>
+
+    <div class="photo-card">
+        <video controls width="100%">
+            <source src="images/gallery/independence/Independence Day-2.mp4" type="video/mp4">
+        </video>
+        <div class="caption">Desh Geet-2</div>
+    </div>
+
+    <div class="photo-card">
+        <video controls width="100%">
+            <source src="images/gallery/independence/Independence Day-2.mp4" type="video/mp4">
+        </video>
+        <div class="caption">We live for the Country</div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- Republic Day -->
+
+<div id="republic" class="gallery-section">
+
+<h2>Republic Day</h2>
+
+<div class="photo-grid">
+
+<div class="photo-card">
+    <img src="images/gallery/republic/Republic Day 2023.jpeg" onclick="openImage(this.src)">
+    <div class="caption">Republic Day 2023</div>
+</div>
+
+<div class="photo-card">
+    <img src="images/gallery/republic/Republic Day 2023-1.jpeg" onclick="openImage(this.src)">
+    <div class="caption">Republic Day 2023-1</div>
+</div>
+
+<div class="photo-card">
+    <img src="images/gallery/republic/Republic Day 2023-2.jpeg" onclick="openImage(this.src)">
+    <div class="caption">Republic Day 2023-2</div>
+</div>
+
+<div class="photo-card">
+    <img src="images/gallery/republic/Republic Day 2024.jpeg" onclick="openImage(this.src)">
+    <div class="caption">Republic Day 2024</div>
+</div>
+
+<div class="photo-card">
+    <img src="images/gallery/republic/Republic Day 2024-1.jpeg" onclick="openImage(this.src)">
+    <div class="caption">Republic Day 2024-1</div>
+</div>
+
+<div class="photo-card">
+    <img src="images/gallery/republic/Republic Day 2024-2.jpeg" onclick="openImage(this.src)">
+    <div class="caption">Republic Day 2024-2</div>
+</div>
+
+<div class="photo-card">
+    <img src="images/gallery/republic/Republic Day 2025.jpeg" onclick="openImage(this.src)">
+    <div class="caption">Republic Day 2025</div>
+</div>
+
+<div class="photo-card">
+        <video controls width="100%">
+            <source src="images/gallery/republic/HM sharing story behind Republic Day.mp4" type="video/mp4">
+        </video>
+        <div class="caption">HM sharing story behind Republic Day</div>
+    </div>
+
+
+</div>
+</div>
+
+<!-- Kit Distribution -->
+
+<div id="kit" class="gallery-section">
+
+<h2>Kit Distribution</h2>
+
+<div class="photo-grid">
+
+    <div class="photo-card">
+        <img src="images/gallery/Kit distribution/KitBag.jpeg" onclick="openImage(this.src)">
+        <div class="caption">School Kit Distribution</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/Kit distribution/KitBag-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Receiving School Kits</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/Kit distribution/Stationary.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Stationery Distribution</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/Kit distribution/Stationary-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Educational Materials Distribution</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/Kit distribution/Stationary-3.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Supporting Student Learning</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/Kit distribution/Stationary-4.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students with Learning Materials</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/Kit distribution/Stationary-5.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Distribution Program</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/Kit distribution/Distribution.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Distribution</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/Kit distribution/Bag distribution.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Bag distribution</div>
+    </div>
+
+</div>
+</div>
+
+<!-- PTM -->
+
+<div id="ptm" class="gallery-section">
+
+<h2>Parent Teacher Meeting</h2>
+
+<div class="photo-grid">
+
+    <div class="photo-card">
+        <img src="images/gallery/ptm/HeadMaster intracting with Parents.jpeg" onclick="openImage(this.src)">
+        <div class="caption">HeadMaster Interacting with Parents</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/ptm/HM addressing Parents.jpeg" onclick="openImage(this.src)">
+        <div class="caption">HM Addressing Parents</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/ptm/HM addressing Parents-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">HM Addressing Parents</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/ptm/Parents at School.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Parents at School</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/ptm/Parents Teachers Intraction.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Parents Teachers Interaction</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/ptm/Parents Teachers Intraction-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Parents Teachers Interaction</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/ptm/Teacher addressing Parents.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Teacher Addressing Parents</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/ptm/PTM-1.jpeg" onclick="openImage(this.src)">
+        <div class="caption">PTM-1</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/ptm/PTM-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">PTM-2</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/ptm/Teacher intracting with Parents.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Teacher intracting with Parents</div>
+    </div>
+    
+</div>
+
+</div>
+
+<!-- PBL -->
+
+<div id="pbl" class="gallery-section">
+
+<h2>PBL Program</h2>
+
+<div class="photo-grid">
+
+    <div class="photo-card">
+        <img src="images/gallery/pbl/POSTER-1.jpeg" onclick="openImage(this.src)">
+        <div class="caption">POSTER-1</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/pbl/POSTER-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">POSTER-2</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/pbl/POSTER-3.jpeg" onclick="openImage(this.src)">
+        <div class="caption">POSTER-3</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/pbl/POSTER-4.jpeg" onclick="openImage(this.src)">
+        <div class="caption">POSTER-4</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/pbl/POSTER-5.jpeg" onclick="openImage(this.src)">
+        <div class="caption">POSTER-5</div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- Plant -->
+
+<div id="plant" class="gallery-section">
+
+<h2>Plant Distribution</h2>
+
+<div class="photo-grid">
+
+    <div class="photo-card">
+        <img src="images/gallery/plant/HeadMaster distribute Plant.jpeg" onclick="openImage(this.src)">
+        <div class="caption">HeadMaster Distributing Plants</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/plant/Student Plant-1.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Receiving Plants</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/plant/Student Plant-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Plant Distribution Activity</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/plant/Student Plant-3.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Environmental Awareness Program</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/plant/Student Plant-4.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students with Saplings</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/plant/Student Plant-5.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Green School Initiative</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/plant/Teacher Planting.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Teacher Tree Planting</div>
+    </div>
+
+</div>
+
+</div>
+
+<div id="result" class="gallery-section">
+
+<h2>Result Distribution</h2>
+
+<div class="photo-grid">
+
+    <div class="photo-card">
+        <img src="images/gallery/result/Result Day.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Academic Achievement Celebration</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/result/Result Day-1.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Receiving Results</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/result/Result Day-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Result Distribution Ceremony</div>
+    </div>
+
+    <div class="photo-card">
+        <video controls width="100%">
+            <source src="images/gallery/result/Result.mp4" type="video/mp4">
+        </video>
+        <div class="caption">Result</div>
+    </div>
+    
+</div>
+
+</div>
+
+<!-- Trip -->
+
+<div id="trip" class="gallery-section">
+
+<h2>School Trip</h2>
+
+<div class="photo-grid">
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/Trip starts.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Trip starts</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/Trip.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Trip</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/Gautam Buddha blessing Students.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Gautam Buddha Blessing Students</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/Head Master guiding the Rajgir Trip.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Head Master Guiding the Rajgir Trip</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/Students In Rajgir.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students in Rajgir</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/HM at Pawapuri Mandir.jpeg" onclick="openImage(this.src)">
+        <div class="caption">HM Guiding Pawapuri Trip</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/Students at Pawapuri Mandir.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students at Pawapuri Mandir</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/Students at Pawapuri Mandir-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students at Pawapuri Mandir</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/Students at Nalanda Khandhar.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students at Nalanda Khandhar</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/Students enjoying at Nalanda Khandhar.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Enjoying at Nalanda Khandhar</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/trip/Teachers at Nalanda Khandhar.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Teachers at Nalanda Khandhar</div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- Sports -->
+
+<div id="sports" class="gallery-section">
+
+<h2>Sports</h2>
+
+<div class="photo-grid">
+
+    <div class="photo-card">
+        <img src="images/gallery/sports/Kabbadi Girls.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Kabaddi Girls</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/sports/Girls Kabaddi.jpg" onclick="openImage(this.src)">
+        <div class="caption">Girls Kabaddi</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/sports/Running Girls.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Girls Running Race</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/sports/Kabbadi-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Kabaddi Match</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/sports/Kabbadi.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Kabaddi Competition</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/sports/Boys Kabaddi.jpg" onclick="openImage(this.src)">
+        <div class="caption">Boys Kabaddi</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/sports/Running Boys.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Boys Running Race</div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- Student Activities -->
+
+<div id="students" class="gallery-section">
+
+<h2>Student Activities</h2>
+
+<div class="photo-grid">
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Chetna Satra.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Chetna Satra</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/EGG Day.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Egg Day</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Emergency Mock Drill.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Emergency Mock Drill</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/HM Addressing Students.jpeg" onclick="openImage(this.src)">
+        <div class="caption">HM Addressing Students</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/HM sharing experience.jpeg" onclick="openImage(this.src)">
+        <div class="caption">HM Sharing Experience</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/HM sharing experience-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">HM Sharing Experience</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Morning Assembly3.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Morning Assembly</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Morning Assembly.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Morning Assembly</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Morning Assembly2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Morning Assembly</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Morning Prayer.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Morning Prayer</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Painting.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Painting Activity</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Painting2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Painting Activity</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Painting3.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Painting Activity</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/PassOUT Students.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Passout Students</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/PassOUT Students2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Passout Students</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/PassOUT Students3.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Passout Students</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/PassOUT Students4.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Passout Students</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Students Awarded.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Awarded</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Students Awarded-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Awarded</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Students Debet.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Debate</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Students Exercise.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Exercise</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Students Planting.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Planting</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Students Pledge.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Pledge</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Students Pledge-2.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Students Pledge</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Teacher Teaching.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Teacher Teaching</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Yoga Day.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Yoga Day</div>
+    </div>
+
+    <div class="photo-card">
+        <video controls width="100%">
+            <source src="images/gallery/students/Teachers Day.mp4" type="video/mp4">
+        </video>
+        <div class="caption">Teachers Day</div>
+    </div>
+
+    <div class="photo-card">
+        <video controls width="100%">
+            <source src="images/gallery/students/Egg Distribution.mp4" type="video/mp4">
+        </video>
+        <div class="caption">Egg Distribution</div>
+    </div>
+
+    <div class="photo-card">
+        <video controls width="100%">
+            <source src="images/gallery/students/TLM Program.mp4" type="video/mp4">
+        </video>
+        <div class="caption">TLM Program</div>
+    </div>
+
+    <div class="photo-card">
+        <video controls width="100%">
+            <source src="images/gallery/students/Student Teaching Activity.mp4" type="video/mp4">
+        </video>
+        <div class="caption">Student Teaching Activity</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Sweet Distribution.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Sweet Distribution</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Pledge.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Pledge</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Morning Assembly4.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Morning Assembly</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Mango Distribution.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Mango Distribution</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Ambedkar Jayanti.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Ambedkar Jayanti</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Headmaster with Students.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Headmaster with Students</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/gallery/students/Headmaster with Students.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Headmaster with Students</div>
+    </div>
+
+    <div class="photo-card">
+         <img src="images/gallery/students/Student Teacher Intraction.jpeg" onclick="openImage(this.src)">
+        <div class="caption">Student Teacher Interaction</div>
+    </div>
+
+</div>
+
+</div>
+
+<div class="back-home">
+<a href="index.html">← Back to Home</a>
+</div>
+
+</section>
+
+<div class="lightbox" id="lightbox">
+<span class="close" onclick="closeImage()">&times;</span>
+<img id="lightbox-img">
+</div>
+
+<script>
+
+function showGallery(id){
+
+let sections=document.querySelectorAll('.gallery-section');
+
+sections.forEach(section=>{
+section.classList.remove('active');
+});
+
+document.getElementById(id).classList.add('active');
+}
+
+function openImage(src){
+
+document.getElementById("lightbox").style.display="block";
+
+document.getElementById("lightbox-img").src=src;
+}
+
+function closeImage(){
+
+document.getElementById("lightbox").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
